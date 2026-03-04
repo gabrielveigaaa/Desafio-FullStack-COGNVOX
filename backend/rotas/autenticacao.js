@@ -6,9 +6,7 @@ const verificarToken = require("../middlewares/auth");
 
 const router = express.Router();
 
-/* =========================
-   CADASTRO
-========================= */
+//cadastro com tratamento de errop
 router.post("/register", async (req, res) => {
   const { nome, email, senha } = req.body;
 
@@ -37,9 +35,7 @@ router.post("/register", async (req, res) => {
   }
 });
 
-/* =========================
-   LOGIN
-========================= */
+// rota para login com tratamento de erro
 router.post("/login", (req, res) => {
   const { email, senha } = req.body;
 
