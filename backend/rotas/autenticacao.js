@@ -2,6 +2,7 @@ const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const db = require("../db");
+const verificarToken = require("../middlewares/auth");
 
 const router = express.Router();
 
@@ -78,6 +79,13 @@ router.post("/login", (req, res) => {
       });
     },
   );
+});
+
+router.get("/dashboard", verificarToken, (req, res) => {
+  res.json({
+    message: "Bem-vindo ao Dashboard!",
+    usuario: req.usuario,
+  });
 });
 
 module.exports = router;
