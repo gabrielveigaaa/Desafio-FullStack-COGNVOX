@@ -1,0 +1,17 @@
+CREATE DATABASE desafio_fullstack;
+USE desafio_fullstack;
+
+CREATE TABLE usuarios(
+id_usuario INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(100) NOT NULL,
+email VARCHAR(200) NOT NULL UNIQUE,
+senha_hash VARCHAR(300) NOT NULL
+);
+
+INSERT INTO usuarios(nome, email, senha_hash) VALUES (
+'Usuário teste',
+'teste@gmail.com',
+'$2b$10$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36E6BjL8zA9pYx9nJZ5l6hW'
+);
+
+SELECT * FROM usuarios;
