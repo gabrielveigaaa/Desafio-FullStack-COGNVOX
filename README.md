@@ -1,16 +1,41 @@
-# React + Vite
+~DESAFIO FULLSTACK COGNVOX~
+José Gabriel Veiga de Andrade
+github: gabrielveigaaa
+ 
+Backend desenvolvido com Node.js;
+Frontend desenvolvido com React + Vite;
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+-PRÉ REQUISITOS:
+    node.js instalado na máquina;
+    npm;
+    MySQL.
 
-Currently, two official plugins are available:
+PASSO A PASSO:
+1- clonar repositório https://github.com/gabrielveigaaa/Desafio-FullStack-COGNVOX.git   ;
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2- ajustar dados do "backend\rotas\ .env" : 
+PORT=3001
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=1234
+DB_NAME=desafio_fullstack
+DB_PORT=3306
+JWT_SECRET=chave_super_secreta
 
-## React Compiler
+3- instalar dependencias na raiz do projeto : npm install
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+3.1-Agora instale as dependências do backend: cd backend
+                                                npm install
+                                                cd ..
 
-## Expanding the ESLint configuration
+4- Rodar a aplicação (frontend + backend juntos) usando o CURRENTLY: npm run full
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+5- Acessar no navegador
+
+Frontend:
+
+http://localhost:5173
+
+Backend (API):
+
+http://localhost:3001
